@@ -1,7 +1,11 @@
 [package]
 name = "dumbeq"
-version = "0.1.0"
-description = "dumbeq library"
+version = "0.1.1"
+
+description = """DumbEq is a safe library providing a derive macro of
+same name that implements [`std::cmp::PartialEq`] and
+[`std::cmp::Eq`], always false."""
+
 readme = "README.md"
 homepage = "https://crates.io/crates/dumbeq"
 license = "MIT OR Apache-2.0"
@@ -17,9 +21,5 @@ path = "dumbeq/lib.rs"
 bench = false
 
 [dependencies]
-clap = { version = "4.5.37", features = ["derive", "env", "string", "unicode", "wrap_help"] }
-iocore = "3.0.0"
-proc-macro2 = "1.0.95"
 quote = "1.0.40"
-serde = { version = "1.0.219", features = ["derive"] }
 syn = "2.0.101"
